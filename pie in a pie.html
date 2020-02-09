@@ -46,11 +46,11 @@ var um = cali + tex + ar + nm;
 var uc = al + wa + idaho + mo + nd + mn + mi + oh + ny + vm + maine;
 // Add data
 chart.data = [{
-  "country": "US Mexico Border",
+  "border": "US Mexico Border",
   "litres": um,
   "subData": [{ name: "California", value: cali }, { name: "New Mexico", value: nm }, { name: "Texas", value: tex }, { name: "Arizona", value: ar }]
 }, {
-  "country": "US Canada Border",
+  "border": "US Canada Border",
   "litres": uc,
   "subData": [{ name: "Alaska", value: al }, { name: "Washington", value: wa }, { name: "Idaho", value: idaho }, { name: "Montana", value: mo }, { name: "North Dakota", value: nd }, { name: "Minnesota", value: mn }, { name: "Michigan", value: mi }, { name: "Ohio", value: oh }, { name: "New York", value: ny }, { name: "Vermont", value: vm }, { name: "Maine", value: maine }]
 }];
@@ -58,7 +58,7 @@ chart.data = [{
 // Add and configure Series
 var pieSeries = chart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "litres";
-pieSeries.dataFields.category = "country";
+pieSeries.dataFields.category = "border";
 pieSeries.slices.template.states.getKey("active").properties.shiftRadius = 0;
 //pieSeries.labels.template.text = "{category}\n{value.percent.formatNumber('#.#')}%";
 
